@@ -24,7 +24,7 @@ $ git clone https://github.com/neoighodaro-articles/trello-clone-vue-laravel
 
 You can also download the entire repository as a zip file and unpack in on your computer if you do not have git
 
-After cloning the application, you need to install it's dependencies.
+After cloning the application, you need to install it's dependencies. 
 ```
 $ cd trello-clone-vue-laravel
 $ composer install
@@ -44,14 +44,25 @@ $ php artisan key:generate
 
 Add your database credentials to the necessary `env` fields
 
-Migrate the application and seed the new data
+Migrate the application
 ```
-$ php artisan migrate --seed
+$ php artisan migrate
 ```
 
 Install Laravel Passport
 ```
 $ php artisan passport:install
+```
+
+Seed the application database to create the categories we use for the application
+```
+$ php artisan db:seed
+```
+
+### Build the appliction
+Before you can successfully run this application, you need to build all your JavaScript assets, so that the Vue components can render. Run the command:
+```
+$ npm run prod
 ```
 
 ### Run the application
